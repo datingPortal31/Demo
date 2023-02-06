@@ -14,11 +14,11 @@ app.get('/',(req,res)=>{
 
 
 app.post('/webhook', async (req, res)   =>  {
-    console.log("console")
-    const paymentId = req.body.id;
-    const payment = await mollie.payments.get(paymentId);
-    // Update your DB HERE based on the status of the payment
-    console.log(payment)
+    console.log("console" , req.body.id)
+    // const paymentId = req.body.id;
+    // const payment = await mollie.payments.get(paymentId);
+    // // Update your DB HERE based on the status of the payment
+    // console.log(payment)
     console.log("console")
 
     res.status(200).send();
