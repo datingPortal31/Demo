@@ -14,6 +14,7 @@ app.get('/',(req,res)=>{
 
 
 app.post('/webhook', async (req, res)   =>  {
+    console.log("console")
     const paymentId = req.body.id;
     const payment = await mollie.payments.get(paymentId);
     // Update your DB HERE based on the status of the payment
